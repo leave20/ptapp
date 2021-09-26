@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ptappmobile/view/login/intro_view.dart';
-import 'package:ptappmobile/view/login/splash_view.dart';
+
 
 class Button extends StatelessWidget {
   const Button({Key? key}) : super(key: key);

@@ -11,13 +11,14 @@ class StatsAccount extends StatelessWidget {
           buildDivider(),
           buildButton(context, '10', 'Rutas'),
           buildDivider(),
-          buildButton(context, '10', 'Rutas')
+          buildButton(context, '300', 'KM')
         ],
       ),
     );
   }
 
   Widget buildDivider() => Container(
+        width: 50.0,
         height: 20,
         child: VerticalDivider(
           color: Colors.white,
@@ -35,14 +36,18 @@ Widget buildButton(BuildContext context, String value, String text) =>
         children: [
           Text(
             value,
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30.0, color: Colors.white),
+            style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 30.0,
+                color: Colors.white),
           ),
           SizedBox(
             height: 2,
           ),
           Text(
             text,
-            style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white30),
+            style:
+                TextStyle(fontWeight: FontWeight.bold, color: Colors.white30),
           ),
         ],
       ),

@@ -1,15 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:ptappmobile/model/user.dart';
+import 'package:ptappmobile/utils/user_preferences.dart';
 
 class ProfileWidget extends StatelessWidget {
+
+
   final String imagePath;
   final VoidCallback onClicked;
+  final bool isEditable;
 
   const ProfileWidget(
-      {Key? key, required this.imagePath, required this.onClicked})
+      {Key? key,
+      required this.imagePath,
+      required this.onClicked,
+      this.isEditable = false})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+
     final color = Theme.of(context).colorScheme.primary;
 
     return Center(
@@ -27,6 +37,7 @@ class ProfileWidget extends StatelessWidget {
   }
 
   Widget buildImage() {
+
     final image = NetworkImage(imagePath);
     return ClipOval(
         child: Material(
@@ -47,9 +58,39 @@ class ProfileWidget extends StatelessWidget {
         child: buildCircle(
           color: color,
           all: 8,
-          child: Icon(
-            Icons.edit,
-            size: 20,
+          child: GestureDetector(
+            onTap: () {
+              User user= UserPreferences.myUser;
+              Get.defaultDialog(
+                title: 'Editing',
+                middleText: 'Please editing our dates',
+                titleStyle: TextStyle(color: Colors.white),
+                backgroundColor: Colors.grey,
+                radius: 5.0,
+                actions: [
+                  ProfileWidget(
+                      imagePath: imagePath,
+                      isEditable: true,
+                      onClicked: onClicked),
+
+                  // TextFieldWidget(
+                  //   label:'Full name',
+                  //   text:user.name,
+                  //   valueChanged: (name){
+                  //
+                  //   },
+                  // ),
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: Text('button'),
+                  )
+                ],
+              );
+            },
+            child: Icon(
+              isEditable? Icons.add_a_photo : Icons.edit,
+              size: 20,
+            ),
           ),
         ),
         all: 3,
@@ -66,3 +107,5 @@ class ProfileWidget extends StatelessWidget {
         ),
       );
 }
+
+

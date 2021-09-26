@@ -7,7 +7,6 @@ import 'package:ptappmobile/view/pages/dashboard/dashboard_binding.dart';
 import 'package:ptappmobile/view/pages/dashboard/navigation_view.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'view/login/splash_view.dart';
 
 var initScreen;
 

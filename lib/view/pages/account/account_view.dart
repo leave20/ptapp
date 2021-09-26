@@ -42,7 +42,7 @@ class AccountPage extends GetView<AccountController> {
           physics: BouncingScrollPhysics(),
           children: [
             SizedBox(
-              height: 20.0,
+              height: 30.0,
             ),
             ProfileWidget(
               onClicked: () async {},
@@ -53,7 +53,7 @@ class AccountPage extends GetView<AccountController> {
             ),
             buildName(user),
             SizedBox(
-              height: 20.0,
+              height: 30.0,
             ),
             // Center(child: buildUpgradeButton()),
             // SizedBox(
@@ -61,7 +61,7 @@ class AccountPage extends GetView<AccountController> {
             // ),
             StatsAccount(),
             SizedBox(
-              height: 20.0,
+              height: 50.0,
             ),
             buildAbout()
           ],
@@ -92,14 +92,18 @@ class AccountPage extends GetView<AccountController> {
           children: [
             Text(
               'About',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold,color: Colors.white),
+              style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white),
             ),
             SizedBox(
               height: 10.0,
             ),
             Text(
               user.about,
-              style: TextStyle(fontSize: 16, height: 1.4, color: Colors.white30),
+              style:
+                  TextStyle(fontSize: 16, height: 1.4, color: Colors.white30),
             )
           ],
         ),
