@@ -8,6 +8,12 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // appBar: AppBar(
+      //   backgroundColor: Colors.black87,
+      //   foregroundColor: Colors.black87,
+      //   shadowColor: Colors.black87,
+      //   automaticallyImplyLeading: false,
+      // ),
       body: Body(),
     );
   }

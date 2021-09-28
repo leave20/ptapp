@@ -10,19 +10,19 @@ class HeaderWithSearchBox extends StatelessWidget {
     return Column(
       children: [
         Container(
-          margin: EdgeInsets.only(bottom: 50.0 *2.5),
-          height: size.height * 0.3,
+          margin: EdgeInsets.only(bottom: 10.0 * 2.5),
+          height: size.height * 0.2,
           child: Stack(children: [
             Container(
               padding:
-              EdgeInsets.only(left: 50.0, right: 50.0, bottom: 36 + 5.0),
+                  EdgeInsets.only(left: 20.0, right: 20.0, bottom: 36 + 20),
               alignment: Alignment.center,
-              height: size.height * 0.3 - 27,
+              height: size.height * 0.2 - 27,
               decoration: BoxDecoration(
                 color: Colors.black87,
                 borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(36),
-                  bottomRight: Radius.circular(36),
+                  bottomLeft: Radius.circular(20),
+                  bottomRight: Radius.circular(20),
                 ),
               ),
               child: Row(
@@ -44,7 +44,7 @@ class HeaderWithSearchBox extends StatelessWidget {
               right: 0,
               child: Container(
                 alignment: Alignment.center,
-                margin: EdgeInsets.symmetric(horizontal: 50.0),
+                margin: EdgeInsets.symmetric(horizontal: 20.0),
                 padding: EdgeInsets.symmetric(horizontal: 20.0),
                 height: 54,
                 decoration: BoxDecoration(
@@ -53,7 +53,7 @@ class HeaderWithSearchBox extends StatelessWidget {
                   boxShadow: [
                     BoxShadow(
                       offset: Offset(0, 10),
-                      blurRadius: 50,
+                      blurRadius: 20,
                       color: Colors.black87.withOpacity(0.23),
                     ),
                   ],
