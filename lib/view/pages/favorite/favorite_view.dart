@@ -14,7 +14,9 @@ class FavoritePage extends GetView<FavoriteController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Hola'),
+        title: Text('Favorites'),
+        automaticallyImplyLeading: false,
+        backgroundColor: Colors.black87,
       ),
       body: FutureBuilder(
           future: readJsonDatabase(),
